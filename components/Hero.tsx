@@ -9,10 +9,9 @@ const Hero = () => {
           <Image
             src="/images/hero-image.jpg"
             alt="Royal figure"
-            width={600}
-            height={400}
-            priority
+            fill
             className={styles.image}
+            priority
           />
         </div>
         <div className={styles.heroContent}>

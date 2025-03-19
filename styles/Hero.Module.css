@@ -1,0 +1,43 @@
+.hero {
+  padding: var(--spacing-xl) 0;
+  background-color: var(--secondary-color);
+}
+
+.heroContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
+  align-items: center;
+}
+
+.heroImage {
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+
+.image {
+  object-fit: cover;
+  border-radius: var(--radius-md);
+}
+
+.heroContent h1 {
+  font-size: 3.5rem;
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-lg);
+}
+
+.heroContent p {
+  font-size: 1.2rem;
+  margin-bottom: var(--spacing-xl);
+}
+
+.joinBtn {
+  padding: 1rem 2rem;
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius-md);
+  font-weight: bold;
+  cursor: pointer;
+} 

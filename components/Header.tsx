@@ -1,23 +1,25 @@
 import Image from 'next/image'
-import styles from '@/styles/Header.module.css'
+import styles from '../styles/Header.Module.css'
 
 const Header = () => {
   return (
     <header className={styles.header}>
-      <div className={styles.headerContainer}>
+      <div className={`${styles.container} ${styles.headerContainer}`}>
         <div className={styles.logo}>
-          <Image 
-            src="/images/logo.svg" 
-            alt="Saint Daniels" 
-            width={40} 
-            height={40}
-            priority
-          />
+          <div className={styles.logoWrapper}>
+            <Image 
+              src="/images/logo.svg" 
+              alt="Saint Daniels Logo" 
+              width={40} 
+              height={40}
+              priority
+            />
+          </div>
           <span className={styles.logoText}>SAINT DANIELS</span>
         </div>
-        <div className={styles.navAuth}>
+        <nav className={styles.nav}>
           <button className={styles.loginBtn}>Login</button>
-        </div>
+        </nav>
       </div>
     </header>
   )

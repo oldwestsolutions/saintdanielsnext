@@ -2,6 +2,15 @@
   background-color: var(--white);
   padding: var(--spacing-md) 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
 }
 
 .headerContainer {
@@ -16,9 +25,21 @@
   gap: var(--spacing-md);
 }
 
+.logoWrapper {
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+
 .logoText {
   font-weight: bold;
   font-size: 1.2rem;
+  color: var(--primary-color);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
 }
 
 .loginBtn {
@@ -29,4 +50,10 @@
   border-radius: var(--radius-md);
   cursor: pointer;
   font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.loginBtn:hover {
+  background-color: var(--primary-color);
+  color: var(--white);
 } 

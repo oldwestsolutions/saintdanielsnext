@@ -1,11 +1,28 @@
+import type { NextPage } from 'next'
 import Head from 'next/head'
-import Header from '../components/Header'
-import Hero from '../components/Hero'
-import RoyalBenefits from '../components/RoyalBenefits'
-import Testimonials from '../components/Testimonials'
+import dynamic from 'next/dynamic'
+
+// Dynamic imports to prevent hydration errors
+const Header = dynamic(() => import('../components/Header'), {
+  ssr: true
+})
+
+const Hero = dynamic(() => import('../components/Hero'), {
+  ssr: true
+})
+
+const RoyalBenefits = dynamic(() => import('../components/RoyalBenefits'), {
+  ssr: true
+})
+
+const Testimonials = dynamic(() => import('../components/Testimonials'), {
+  ssr: true
+})
+
+// Import styles
 import styles from '../styles/Home.Module.css'
 
-export default function Home() {
+const Home: NextPage = () => {
   return (
     <>
       <Head>
@@ -14,12 +31,17 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
-        <Header />
-        <Hero />
-        <RoyalBenefits />
-        <Testimonials />
-      </main>
+
+      <div className={styles.container}>
+        <main className={styles.main}>
+          <Header />
+          <Hero />
+          <RoyalBenefits />
+          <Testimonials />
+        </main>
+      </div>
     </>
   )
-} 
+}
+
+export default Home 

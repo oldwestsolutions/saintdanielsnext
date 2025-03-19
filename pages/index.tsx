@@ -1,8 +1,8 @@
 import Head from 'next/head'
-import Header from '@/components/Header'
-import Hero from '@/components/Hero'
-import RoyalBenefits from '@/components/RoyalBenefits'
-import Testimonials from '@/components/Testimonials'
+import Header from '../components/Header'
+import Hero from '../components/Hero'
+import RoyalBenefits from '../components/RoyalBenefits'
+import Testimonials from '../components/Testimonials'
 import styles from '@/styles/Home.module.css'
 
 export default function Home() {

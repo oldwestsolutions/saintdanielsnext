@@ -5,7 +5,11 @@ const nextConfig = {
   images: {
     domains: ['localhost'],
     unoptimized: true
-  }
+  },
+  env: {
+    PORT: process.env.PORT || 3000
+  },
+  output: 'standalone'
 }
 
 module.exports = nextConfig 
